@@ -1,0 +1,27 @@
+html {  /*Question 2.a*/
+    background-color :#97d1c7 ;
+    /*Question 2.b*/
+    width : 950px ; 
+    border : 5px solid white;
+}
+
+li { /*Question 2.c*/
+    border : 1px solid yellow;
+}
+
+h1 { /*Question 2.d*/
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    /*Question 2.e*/
+    text-shadow: 3px 3px 1px white;
+}
+
+#changecouleur{ /*Question 3 (voir aussi dans le HTML)*/
+    color: royalblue;
+}
+
+.italique{ /*Question 4*/
+    font-style: italic;
+    color : red;
+}

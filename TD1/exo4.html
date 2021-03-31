@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>Au menu</title>
+  <style type="text/css">
+    :root {
+      color-scheme: light dark;
+    }
+    body {font-family: "Helvetica";
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+    table {
+      border: 2px solid red;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    .maincol {background-color: darkgray;}
+    .price {text-align: right;}
+    h1, p {text-align: center;}
+  </style>
+</head>
+<body>
+    <h1>Au menu</h1>
+    <table>
+      <colgroup>
+        <col span="1" class="maincol">
+      </colgroup>
+
+      <tr>
+        <th></th>
+        <th>Recette</th>
+        <th>Prix</th>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="col">
+          Entrée
+        </th>
+        <td>
+          Soupe de légumes
+        </td>
+        <td class="price">
+          8 euros
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Salade aux fruits de mer
+        </td>
+        <td class="price">
+          9 euros
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">
+          Plat
+        </th>
+        <td>
+          Couscous au poisson
+        </td>
+        <td class="price">
+          14 euros
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Côte de veau aux petits legumes
+        </td>
+        <td class="price">
+          12 euros
+        </td>
+      </tr>
+      <tr>
+        <th rowspan="2">
+          Dessert
+        </th>
+        <td>
+          Tiramisu
+        </td>
+        <td class="price">
+          6 euros
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Mousse au chocolat
+        </td>
+        <td class="price">
+          5 euros
+        </td>
+      </tr>
+    </table>
+    <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+    </p>
+</body>
+</html>
