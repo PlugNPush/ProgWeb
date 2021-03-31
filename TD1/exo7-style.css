@@ -1,0 +1,46 @@
+#paragraphe
+{
+color:#000000;
+background-color:#eb7b7b;
+border:3px solid #000000;
+min-height:10em;
+height:10em;
+display: inline-block;
+visibility: hidden;
+}
+body{
+    background-color: #c2f7f0;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.container {
+    background-color: red;
+    width: 300px;
+    border: 5px solid black;
+    border-radius : 15px;
+    box-shadow: 10px 8px 5px rgb(158, 17, 17);
+    margin-bottom: 80px;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.miam:hover {
+    color: orange;
+}
+
+.content-holder {
+  display: inline-block;
+  float: inherit;
+  margin-right: 50px;
+}
+
+.content-holder:hover * #paragraphe {
+  display: inline-block;
+  visibility: visible;
+}
