@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulaire d'inscription</title>
+		<link type="text/css" rel="stylesheet" href="exo2-style.css">
+	</head>
+	<body>
+		<header>
+			<form>
+				<div class="coordonnees">
+					<h2>Coordonnées</h2>
+					<p><b>Nom</b><br>
+					<input type="text" id="nom" name="nom" size="30" placeholder="Saisissez votre Nom"></p>
+
+					<p><b>Prénom</b><br>
+					<input type="text" id="prenom" name="prenom" size="30" placeholder="Saisissez votre Prénom"></p>
+
+					<p><b>Adresse</b><br>
+					<input type="text" id="adresse" name="adresse" size="30" placeholder="Saisissez votre Adresse"></p>
+					
+					<p><b>Adresse électronique</b><br>
+					<input type="email" id="email" name="email" size="30" placeholder="Saisissez votre adresse email"></p>
+			
+					<p><b>Mot de passe</b><br>
+					<input type="password" id="password" name="password" size="30" placeholder="Saissez votre mot de passe"></p>
+					
+					<p><input type="checkbox" id="documentation" name="documentation" value="yes">
+					<b>Je souhaite recevoir de la documentation</b></p>
+
+					<p><b>Pays</b>
+					<select>
+						<optgroup label="Pays">
+							<option selected value="D">Allemagne</option>
+							<option value="CH">Suisse</option>
+							<option value="F">France</option>
+						</optgroup>
+					</select></p>
+
+					<p><b>Sexe</b>
+					<input type="radio" id="masculin" name="genre" value="masculin">Masculin
+					<input type="radio" id="feminin" name="genre" value="feminin">Féminin</p>
+				</div>
+
+				<div class="activites">
+					<h2>Domaine(s) d'activité</h2>
+					<p>Vous pouvez en choisir plus qu'un...</p>
+					<p>
+					<input type="checkbox" id="mecanique" name="activites" value="mecanique">Mécanique
+					<input type="checkbox" id="electronique" name="activites" value="electronique">Électronique
+					<input type="checkbox" id="informatique" name="activites" value="informatique">Informatique
+					<input type="checkbox" id="autre" name="activites" value="autre">Autre
+					</p>
+				</div>
+
+				<button type="submit">
+	        	Ajouter
+	    		</button>
+
+	    		<button type="reset">
+	        	Supprimer
+	    		</button>
+			</form>
+		</header>
+	</body>
+</html>
