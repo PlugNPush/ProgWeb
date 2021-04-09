@@ -4,16 +4,16 @@
 		<meta charset="utf-8">
 		<title>Accueil</title>
 		<link type="text/css" rel="stylesheet" href="exo4-style.css">
-        <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width">
 	</head>
 
 	<body>
 		<header>
-			<div class="item">
-				<img class="logo" src="stonks.png" alt="Not stonks..." width=100px>
+			<div class="headerlogo">
+				<img class="logo" src="stonks.png" alt="Not stonks..." width=100>
 			</div>
 
-            <form>
+      <form>
 				<input type="text" id="nom" name="nom" placeholder="Saisissez votre Nom"> <!-- size="30"-->
 
 				<input type="text" id="prenom" name="prenom" placeholder="Saisissez votre Prénom">
@@ -22,20 +22,22 @@
 
 				<select>
 					<optgroup label="Rôle">
-						<option>Etudiant</option>
-						<option>Enseignant</option>					
+						<option value="etudiant">Étudiant</option>
+						<option value="enseignant">Enseignant</option>
 					</optgroup>
-				</select>
-				<br>
+				</select><br>
 
-				<button type="submit">
-	        	Ajouter
-	    		</button>
+				<div class="buttons">
+					<button type="submit">
+		        Ajouter
+		    	</button>
 
-				<button type="reset">
-	        	Tout supprimer
-	    		</button>
-            </form>
+					<button type="reset">
+		        Tout supprimer
+		    	</button>
+				</div>
+
+      </form>
 		</header>
 	</body>
 </html>

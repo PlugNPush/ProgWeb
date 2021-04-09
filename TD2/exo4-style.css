@@ -1,19 +1,21 @@
-*{box-sizing: border-box;}
+*{
+	box-sizing: border-box;
+}
 
 .logo{
 	border-radius: 100%;
 	border: 3px solid black;
 	margin-top: 15px;
-    margin-bottom: 15px; /*à voir*/
+  margin-bottom: 15px;
 	box-shadow: 0px 0px 15px black;
 }
 
-.item{
+.headerlogo{
 	text-align: center;
 }
 
 form{
-	text-align: center; /*à voir*/
+	text-align: center;
 	box-shadow: 0px 0px 10px grey;
 	padding: 10px;
 	background-color: white;
@@ -21,8 +23,8 @@ form{
 	margin: 0 auto;
 	/*width: 100%;
 	border: 1px solid black;
-    padding: 30px;*/ /*Q4: Créer une bordure autour du formulaire mais la bordure dépasse*/
-	/*box-sizing: border-box;*/ /*Q5: Permet d'ajuster la bordure*/
+  padding: 30px;*/ /*Q4: La bordure du formulaire dépasse sur la droite*/
+	/*box-sizing: border-box;*/ /*Q5: Ajuste la bordure à la taille de l'écran*/
 }
 
 body{
@@ -30,5 +32,9 @@ body{
 }
 
 button{
-	margin: 10px;
+	margin: 5px;
+}
+
+.buttons{
+	margin-top: 10px;
 }
