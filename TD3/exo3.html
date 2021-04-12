@@ -13,30 +13,32 @@
 				<img class="logo" src="stonks.png" alt="Not stonks..." width=100>
 			</div>
 
-			<form class="main" id="formonly">
-				<div class="formcontent">
-					<input type="text" id="nom" name="nom" placeholder="Saisissez votre Nom" required>
+			<div>
+				<form class="main" id="formonly">
+					<div class="formcontent">
+						<input type="text" id="nom" name="nom" placeholder="Saisissez votre Nom" required>
 
-					<input type="text" id="prenom" name="prenom" placeholder="Saisissez votre Prénom" required>
+						<input type="text" id="prenom" name="prenom" placeholder="Saisissez votre Prénom" required>
 
-					<input type="email" id="email" name="email" placeholder="Saisissez votre adresse email" required>
+						<input type="email" id="email" name="email" placeholder="Saisissez votre adresse email" required>
 
-					<select id="role">
-						<optgroup label="Rôle">
-							<option value="etudiant">Étudiant</option>
-							<option value="enseignant">Enseignant</option>
-						</optgroup>
-					</select>
-				</div>
-				<div class="buttons">
-					<button type="button" onclick="ajouter()">
-		        	Ajouter
-					</button>
-					<button type="reset" onclick="suicide()">
-		        	Tout supprimer
-					</button>
-				</div>
-			</form>
+						<select id="role">
+							<optgroup label="Rôle">
+								<option value="etudiant">Étudiant</option>
+								<option value="enseignant">Enseignant</option>
+							</optgroup>
+						</select>
+					</div>
+					<div class="buttons">
+						<button type="button" onclick="ajouter()">
+			        	Ajouter
+						</button>
+						<button type="reset" onclick="suicide()">
+			        	Tout supprimer
+						</button>
+					</div>
+				</form>
+			</div>
 		</header>
 		<main class="main">
 			<table id="table">
@@ -86,6 +88,21 @@
 					alert("Eh remplis bien le formulaire toi là");
 				}
 			}
+
+
+			window.onscroll = function() {electroaimant()};
+
+			var bornemoins = document.getElementById("formonly");
+			var borneplus = bornemoins.offsetTop + bornemoins.offsetHeight;
+
+			function electroaimant() {
+			  if (window.pageYOffset > borneplus) {
+			    bornemoins.classList.add("aimante");
+			  } else {
+			    bornemoins.classList.remove("aimante");
+			  }
+			}
+			
 		</script>
 	</body>
 </html>

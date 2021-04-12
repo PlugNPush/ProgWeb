@@ -71,7 +71,7 @@ input:invalid{
 /*TP3*/
 table {
 	border-collapse: collapse;
-	/*width: 100%;*/
+	width: 100%;
 	margin: 5px auto;
 	text-align: center;
 	table-layout: fixed;
@@ -92,9 +92,10 @@ table:last-child{
 	border-bottom: hidden;
 }
 
-#formonly {
-	display: block;
-	position: sticky;
-	position: -webkit-sticky
-	top: 0px;
+.aimante {
+	position: fixed;
+  top: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
 }
