@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Accueil</title>
+		<link type="text/css" rel="stylesheet" href="exo3-style.css">
+		<meta name="viewport" content="width=device-width">
+	</head>
+
+	<body>
+		<header>
+			<div class="headerlogo">
+				<img class="logo" src="stonks.png" alt="Not stonks..." width=100>
+			</div>
+
+			<form class="main">
+				<div class="formcontent">
+					<input type="text" id="nom" name="nom" placeholder="Saisissez votre Nom" required>
+
+					<input type="text" id="prenom" name="prenom" placeholder="Saisissez votre Prénom" required>
+
+					<input type="email" id="email" name="email" placeholder="Saisissez votre adresse email" required>
+
+					<select id="role">
+						<optgroup label="Rôle">
+							<option value="etudiant">Étudiant</option>
+							<option value="enseignant">Enseignant</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="buttons">
+					<button type="button" onclick="ajouter()">
+		        	Ajouter
+					</button>
+					<button type="reset" onclick="suicide()">
+		        	Tout supprimer
+					</button>
+				</div>
+			</form>
+		</header>
+		<main class="main">
+			<table id="table">
+				<tr>
+					<th>Prénom</th>
+					<th>Nom</th>
+					<th>Email</th>
+					<th>Rôle</th>
+				</tr>
+			</table>
+		</main>
+		<script>
+			console.log("Bonjour !");
+
+			var defaulttable = document.getElementById('table').innerHTML;
+
+			function suicide(){
+				document.getElementById('table').innerHTML = defaulttable;
+			}
+
+			function ajouter(){
+				console.log("Comment ça va, " + document.getElementById('prenom').value + " ?");
+
+				if (document.getElementById('nom').checkValidity() && document.getElementById('prenom').checkValidity() && document.getElementById('email').checkValidity() && document.getElementById('role').checkValidity()) {
+					console.log(document.getElementById('table')); /* Cela recopie notre <table> dans la console */
+					var section = document.createElement('tr');
+
+					var valeur1 = document.createElement('td');
+					valeur1.textContent = document.getElementById('nom').value;
+					var valeur2 = document.createElement('td');
+					valeur2.textContent = document.getElementById('prenom').value;
+					var valeur3 = document.createElement('td');
+					valeur3.textContent = document.getElementById('email').value;
+					var valeur4 = document.createElement('td');
+					valeur4.textContent = document.getElementById('role').value;
+
+					section.appendChild(valeur1);
+					section.appendChild(valeur2);
+					section.appendChild(valeur3);
+					section.appendChild(valeur4);
+
+					console.log(section);
+
+					document.getElementById('table').appendChild(section);
+
+				} else {
+					alert("Eh remplis bien le formulaire toi là");
+				}
+			}
+		</script>
+	</body>
+</html>
