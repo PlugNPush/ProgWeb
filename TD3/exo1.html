@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Accueil</title>
+		<link type="text/css" rel="stylesheet" href="exo1-style.css">
+    	<meta name="viewport" content="width=device-width">
+	</head>
+
+	<body>
+		<header>
+			<div class="headerlogo">
+				<img class="logo" src="stonks.png" alt="Not stonks..." width=100>
+			</div>
+
+      		<form class="main">
+				<div class="formcontent">
+					<input type="text" id="nom" name="nom" placeholder="Saisissez votre Nom" required>
+
+					<input type="text" id="prenom" name="prenom" placeholder="Saisissez votre Prénom" required>
+
+					<input type="email" id="email" name="email" placeholder="Saisissez votre adresse email" required>
+
+					<select>
+						<optgroup label="Rôle">
+							<option value="etudiant">Étudiant</option>
+							<option value="enseignant">Enseignant</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="buttons">
+					<button type="submit" onclick="ajouter()">
+		        	Ajouter
+		    		</button>
+
+					<button type="reset">
+		        	Tout supprimer
+		    		</button>
+				</div>
+
+      		</form>
+		</header>
+		<main class="main">
+			<table>
+				<tr>
+					<th>Prénom</th>
+					<th>Nom</th>
+					<th>Email</th>
+					<th>Rôle</th>
+				</tr>
+			</table>
+		</main>
+		<script>
+			console.log("Bonjour !");
+			function ajouter(){
+				alert("Comment ça va la familia ?");
+			}
+			ajouter();
+		</script>
+	</body>
+</html>
