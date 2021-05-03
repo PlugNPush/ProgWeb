@@ -28,7 +28,7 @@ body{
 	background-color: lightgrey;
 }
 
-.buttons button{
+button{
 	margin: 5px;
 	text-transform: uppercase;
 	border: none;
@@ -37,7 +37,7 @@ body{
 	padding: 3px;
 }
 
-.buttons button:hover{
+button:hover{
 	background-color: grey;
 }
 
@@ -71,75 +71,30 @@ input:invalid{
 /*TP3*/
 table {
 	border-collapse: collapse;
-	width: 100%;
+	/*width: 100%;*/
 	margin: 5px auto;
 	text-align: center;
+	table-layout: fixed;
 	overflow-x: scroll;
 }
 
 th {
 	padding: 5px;
-	/*border-bottom: 1px solid black;*/
+	border-bottom: 1px solid black
 }
 
 td {
 	padding: 3px;
+	border-bottom: 1px solid black
 }
 
-tr {
-	border-bottom: 1px solid black;
-}
-
-table tr:last-of-type{
+table:last-child{
 	border-bottom: hidden;
 }
 
-tbody tr:last-of-type{
-	border-bottom: 2px solid black;
-}
-
-.aimante {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
-}
-
-.disabled {
-	background-color: black;
-	color: red;
-}
-
-/**/
-
-nav {
-	text-align: center;
-	margin-bottom: 7px;
-}
-
-nav button{
-	background-color: white;
-	padding: 3px;
-	text-transform: uppercase;
-	border: none;
-	box-shadow: 0px 0px 3px grey;
-}
-
-nav button:hover{
-	background-color: lightgrey;
-}
-
-#title_task, #title_user {
-	text-align: center;
-	font-weight: bold;
-	text-decoration-line: underline;
-}
-
-.chuispala {
-	display:none;
-}
-
-.suivant {
-	text-align: center;
+#formonly {
+	display: block;
+	position: sticky;
+	position: -webkit-sticky
+	top: 0px;
 }
