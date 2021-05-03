@@ -190,9 +190,7 @@
 					 	console.log('data', data)
 
 						data.forEach(function(item, index, array) {
-  							console.log(item, index);
 								createTask(item.userId, item.id, item.title, item.completed)
-								console.log("UserId : " + item.userId + ", id : " + item.id + ", title : " + item.title + " and completed : " + item.completed)
 						});
 
 				})
@@ -214,8 +212,6 @@
 				section.appendChild(valeur2);
 				section.appendChild(valeur3);
 				section.appendChild(valeur4);
-
-				console.log(section);
 
 				document.getElementById('table_task').appendChild(section);
 			}
