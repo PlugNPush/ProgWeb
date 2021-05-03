@@ -12,7 +12,14 @@
 			<div class="headerlogo">
 				<img class="logo" src="stonks.png" alt="Not stonks..." width=100>
 			</div>
-
+			<nav id="nav">
+				<button type="button" class="user" onclick="showUsers()" id="user">
+					Utilisateurs
+				</button>
+				<button type="button" class="task" onclick="showTasks()" id="task">
+					Tâches
+				</button>
+			</nav>
 			<div>
 				<form class="main" id="formonly">
 					<div class="formcontent">
@@ -42,11 +49,22 @@
 		</header>
 		<main class="main">
 			<table id="table">
+				<p id="title_user">Utilisateurs</p>
 				<tr>
 					<th>Prénom</th>
 					<th>Nom</th>
 					<th>Email</th>
 					<th>Rôle</th>
+				</tr>
+			</table>
+			
+			<table id="table_task" class="chuispala">
+				<p id="title_task" class="chuispala">Tâches</p>
+				<tr>
+					<th>User ID</th>
+					<th>ID</th>
+					<th>Titre</th>
+					<th>Terminé</th>
 				</tr>
 			</table>
 		</main>
@@ -59,7 +77,12 @@
 
 			console.log("Bonjour !");
 
-			var defaulttable = document.getElementById('table').innerHTML;
+			const defaulttable = document.getElementById('table').innerHTML;
+			const table_task = document.getElementById("table_task");
+			const table = document.getElementById("table");
+			const title_task = document.getElementById("title_task");
+			const title_user = document.getElementById("title_user");
+			const formulaire = document.getElementById("formonly");
 
 			function suicide(){
 				document.getElementById('table').innerHTML = defaulttable;
@@ -122,7 +145,7 @@
 
 			function timerReset() {
 				timerDone = false;
-				remaining = 10
+				remaining = 10;
 				interval = window.setInterval(timerHandler, 10000);
 				refresh = window.setInterval(updateTicker, 1000);
 			}
@@ -142,9 +165,24 @@
 					element.classList.remove("disabled");
 					clearInterval(refresh);
 				}
-
 			}
 
+			function showTasks() {
+				table_task.classList.remove("chuispala");
+				title_task.classList.remove("chuispala");
+				table.classList.add("chuispala");
+				title_user.classList.add("chuispala");
+				formulaire.classList.add("chuispala");
+			}
+
+			function showUsers() {
+				table_task.classList.add("chuispala");
+				title_task.classList.add("chuispala");
+				table.classList.remove("chuispala");
+				title_user.classList.remove("chuispala");
+				formulaire.classList.remove("chuispala");
+			}
+			
 		</script>
 	</body>
 </html>
