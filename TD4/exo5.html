@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Accueil</title>
-		<link type="text/css" rel="stylesheet" href="exo4-style.css">
+		<link type="text/css" rel="stylesheet" href="exo5-style.css">
 		<meta name="viewport" content="width=device-width">
 	</head>
 
@@ -194,6 +194,9 @@
 				title_user.classList.add("chuispala");
 				formulaire.classList.add("chuispala");
 				pagination.classList.remove("chuispala");
+				if (!document.data){
+					getTasks();
+				}
 			}
 
 			function showUsers() {
@@ -250,7 +253,6 @@
 
 			function next(){
 				let max = document.data.length/10;
-				console.log(document.data.length);
 				if (page+1<max){
 					page+=1;
 					refreshTasks(page);
@@ -279,7 +281,7 @@
 				}
 			}
 
-			getTasks();
+			//getTasks();
 
 		</script>
 	</body>
